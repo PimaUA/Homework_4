@@ -37,6 +37,7 @@ public class Dog extends Animal {
         }
     }
 
+    //getters & setters for name
     @Override
     public String getName() {
         return name;

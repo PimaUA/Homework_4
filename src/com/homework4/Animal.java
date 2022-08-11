@@ -19,6 +19,7 @@ public abstract class Animal {
     //swim method
     public abstract void swim(int lengthOfObstacle);
 
+    //getters & setters for name
     public String getName() {
         return name;
     }

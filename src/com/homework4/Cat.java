@@ -33,6 +33,7 @@ public class Cat extends Animal {
         System.out.println("Sorry, cats can't swim!");
     }
 
+    //getters & setters for name
     @Override
     public String getName() {
         return name;
