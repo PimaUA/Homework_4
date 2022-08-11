@@ -11,11 +11,13 @@ public class Cat extends Animal {
     public Cat(String name) {
         this.name = name;
     }
-// counter for number of cats
+
+    // counter for number of cats
     public static void getCounter() {
         System.out.println(counter + " cats created.");
     }
-//run method for cats
+
+    //run method for cats
     @Override
     public void run(int lengthOfObstacle) {
         if (lengthOfObstacle < 0 || lengthOfObstacle > 200) {
@@ -24,7 +26,8 @@ public class Cat extends Animal {
             System.out.println(name + " ran " + lengthOfObstacle + " meters.");
         }
     }
-//swim method for cats
+
+    //swim method for cats
     @Override
     public void swim(int lengthOfObstacle) {
         System.out.println("Sorry, cats can't swim!");

@@ -11,10 +11,12 @@ public class Dog extends Animal {
     public Dog(String name) {
         this.name = name;
     }
+
     // counter for number of dogs
     public static void getCounter() {
         System.out.println(counter + " dogs created.");
     }
+
     //run method for dogs
     @Override
     public void run(int lengthOfObstacle) {
@@ -24,6 +26,7 @@ public class Dog extends Animal {
             System.out.println(name + " ran " + lengthOfObstacle + " meters.");
         }
     }
+
     //swim method for dogs
     @Override
     public void swim(int lengthOfObstacle) {

@@ -1,24 +1,23 @@
 package com.homework4;
 
-public class Animal {
+public abstract class Animal {
     private String name;
     private static int counter;
 
     {
         counter++;
     }
+
     // counter for number of animals
     public static void getCounter() {
         System.out.println(counter + " animals created.");
     }
-    //default run method
-    public void run(int lengthOfObstacle) {
-        System.out.println(name + " ran " + lengthOfObstacle + " meters");
-    }
-    //default swim method
-    public void swim(int lengthOfObstacle) {
-        System.out.println(name + " swam " + lengthOfObstacle + " meters");
-    }
+
+    //run method
+    public abstract void run(int lengthOfObstacle);
+
+    //swim method
+    public abstract void swim(int lengthOfObstacle);
 
     public String getName() {
         return name;
