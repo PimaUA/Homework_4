@@ -1,8 +1,8 @@
 package com.homework4;
 
 public class Dog extends Animal {
-private String name;
-private static int counter;
+    private String name;
+    private static int counter;
 
     {
         counter++;
@@ -11,11 +11,11 @@ private static int counter;
     public Dog(String name) {
         this.name = name;
     }
-
-    static void getCounter(){
-        System.out.println(counter+" dogs created.");
+    // counter for number of dogs
+    public static void getCounter() {
+        System.out.println(counter + " dogs created.");
     }
-
+    //run method for dogs
     @Override
     public void run(int lengthOfObstacle) {
         if (lengthOfObstacle < 0 || lengthOfObstacle > 500) {
@@ -24,15 +24,15 @@ private static int counter;
             System.out.println(name + " ran " + lengthOfObstacle + " meters.");
         }
     }
-
-        @Override
-       public void swim ( int lengthOfObstacle){
-            if (lengthOfObstacle <0 || lengthOfObstacle >10) {
-                System.out.println("For dogs swimming distance limit is between 0 and 10!");
-            } else {
-                System.out.println(name + " swam " + lengthOfObstacle + " meters.");
-            }
+    //swim method for dogs
+    @Override
+    public void swim(int lengthOfObstacle) {
+        if (lengthOfObstacle < 0 || lengthOfObstacle > 10) {
+            System.out.println("For dogs swimming distance limit is between 0 and 10!");
+        } else {
+            System.out.println(name + " swam " + lengthOfObstacle + " meters.");
         }
+    }
 
     @Override
     public String getName() {
