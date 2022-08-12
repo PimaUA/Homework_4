@@ -1,16 +1,17 @@
 package com.homework4;
 
 public abstract class Animal {
-    private String name;
-    private static int counter;
+    protected String name;
+    private static int animalCounter;
 
-    {
-        counter++;
+    public Animal(String name) {
+        this.name = name;
+        animalCounter++;
     }
 
     // counter for number of animals
     public static void getCounter() {
-        System.out.println(counter + " animals created.");
+        System.out.println(animalCounter + " animals created.");
     }
 
     //run method
@@ -18,13 +19,4 @@ public abstract class Animal {
 
     //swim method
     public abstract void swim(int lengthOfObstacle);
-
-    //getters & setters for name
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

@@ -1,20 +1,16 @@
 package com.homework4;
 
 public class Dog extends Animal {
-    private String name;
-    private static int counter;
-
-    {
-        counter++;
-    }
+    private static int dogCounter;
 
     public Dog(String name) {
-        this.name = name;
+        super(name);
+        dogCounter++;
     }
 
     // counter for number of dogs
     public static void getCounter() {
-        System.out.println(counter + " dogs created.");
+        System.out.println(dogCounter + " dogs created.");
     }
 
     //run method for dogs
@@ -35,16 +31,5 @@ public class Dog extends Animal {
         } else {
             System.out.println(name + " swam " + lengthOfObstacle + " meters.");
         }
-    }
-
-    //getters & setters for name
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 }

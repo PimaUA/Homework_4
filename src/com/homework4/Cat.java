@@ -1,20 +1,16 @@
 package com.homework4;
 
 public class Cat extends Animal {
-    private String name;
-    private static int counter;
-
-    {
-        counter++;
-    }
+    private static int catCounter;
 
     public Cat(String name) {
-        this.name = name;
+        super(name);
+        catCounter++;
     }
 
     // counter for number of cats
     public static void getCounter() {
-        System.out.println(counter + " cats created.");
+        System.out.println(catCounter + " cats created.");
     }
 
     //run method for cats
@@ -31,16 +27,5 @@ public class Cat extends Animal {
     @Override
     public void swim(int lengthOfObstacle) {
         System.out.println("Sorry, cats can't swim!");
-    }
-
-    //getters & setters for name
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 }
